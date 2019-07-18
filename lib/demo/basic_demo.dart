@@ -5,7 +5,17 @@ class BasicDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
-      color: Colors.grey[100],
+//      color: Colors.grey[100],
+      decoration: BoxDecoration(
+          image: DecorationImage(
+              image:
+                  NetworkImage("https://www.baidu.com/img/baidu_jgylogo3.gif"),
+              alignment: Alignment.topCenter,
+//              repeat: ImageRepeat.repeat,
+              fit: BoxFit.cover,
+              colorFilter: ColorFilter.mode(
+                  Colors.indigoAccent[400].withOpacity(0.5),
+                  BlendMode.hardLight))),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
@@ -25,44 +35,17 @@ class BasicDemo extends StatelessWidget {
 //                borderRadius: BorderRadius.circular(12),
                 boxShadow: [
                   BoxShadow(
-                      offset: Offset(0, 10),
-                      color: Color.fromRGBO(16, 20, 188, 1),
+                      offset: Offset(0, 6),
+                      color: Color.fromRGBO(3, 54, 255, 1),
                       blurRadius: 25,
                       spreadRadius: -2.0),
                 ],
                 shape: BoxShape.circle,
-                gradient: RadialGradient(colors: [
+                gradient: LinearGradient(colors: [
                   Color.fromRGBO(7, 102, 255, 1),
                   Color.fromRGBO(3, 25, 128, 1)
-                ])),
+                ], begin: Alignment.topCenter, end: Alignment.topCenter)),
           ),
-          Container(
-            child: Icon(Icons.add_location, size: 30, color: Colors.white),
-//            color: Color.fromRGBO(3, 54, 255, 1.0),
-            padding: EdgeInsets.all(10),
-            margin: EdgeInsets.all(20),
-            width: 60,
-            height: 60,
-            decoration: BoxDecoration(
-                color: Color.fromRGBO(3, 54, 255, 1.0),
-                border: Border.all(
-                    color: Colors.yellow[100],
-                    width: 6,
-                    style: BorderStyle.solid),
-//                borderRadius: BorderRadius.circular(12),
-                boxShadow: [
-                  BoxShadow(
-                      offset: Offset(-20, -10),
-                      color: Color.fromRGBO(16, 20, 5, 1),
-                      blurRadius: 25,
-                      spreadRadius: -2.0),
-                ],
-                shape: BoxShape.circle,
-                gradient: RadialGradient(colors: [
-                  Color.fromRGBO(7, 111, 20, 1),
-                  Color.fromRGBO(3, 100, 60, 1)
-                ])),
-          )
         ],
       ),
     );
