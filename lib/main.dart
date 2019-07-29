@@ -6,6 +6,7 @@ import 'demo/bottom_navigation_bar_demo.dart';
 import 'demo/basic_demo.dart';
 import 'demo/layout_demo.dart';
 import 'demo/view_demo.dart';
+import 'demo/sliver_demo.dart';
 
 void main() => runApp(App());
 
@@ -29,14 +30,14 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return DefaultTabController(
-        length: 4,
+        length: 5,
         child: Scaffold(
           backgroundColor: Colors.grey[100],
           appBar: AppBar(
             title: Center(
               child: Text(
                 'Berfy',
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(color: Colors.white),
               ),
             ),
             actions: <Widget>[
@@ -57,6 +58,7 @@ class Home extends StatelessWidget {
                   Tab(icon: Icon(Icons.change_history)),
                   Tab(icon: Icon(Icons.directions_bike)),
                   Tab(icon: Icon(Icons.view_quilt)),
+                  Tab(icon: Icon(Icons.ac_unit)),
                 ]),
           ),
           body: TabBarView(children: <Widget>[
@@ -64,6 +66,7 @@ class Home extends StatelessWidget {
             BasicDemo(),
             LayoutDemo(),
             ViewDemo(),
+            SliverDemo(),
           ]),
           drawer: DrawerDemo(),
           bottomNavigationBar: BottomNavigationBarDemo(),
