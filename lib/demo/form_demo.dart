@@ -4,6 +4,10 @@ class FormDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Form表单'),
+        centerTitle: true,
+      ),
       body: Theme(
           data: Theme.of(context).copyWith(
             primaryColor: Colors.blue,

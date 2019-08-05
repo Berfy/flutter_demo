@@ -4,6 +4,7 @@ import '../demo/post_show.dart';
 
 class ListViewDemo extends StatelessWidget {
   Widget _listItemBuilder(BuildContext context, int index) {
+    debugPrint("位置$index");
     return Container(
       color: Colors.white,
       margin: EdgeInsets.all(8.0),

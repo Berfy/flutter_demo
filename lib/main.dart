@@ -9,6 +9,7 @@ import 'demo/view_demo.dart';
 import 'demo/sliver_demo.dart';
 import 'demo/navigator_demo.dart';
 import 'demo/form_demo.dart';
+import 'demo/material_components.dart';
 
 void main() => runApp(App());
 
@@ -23,10 +24,11 @@ class App extends StatelessWidget {
         '/about': (context) => Page(
           title: "About",
         ),
-        'form': (context) => FormDemo(),
+        '/form': (context) => FormDemo(),
+        '/mdc': (context) => MaterialComponents(),
       },
 //      home: Home(),
-      initialRoute: 'form',
+      initialRoute: '/mdc',
       theme: ThemeData(
           primarySwatch: Colors.blue,
           highlightColor: Colors.blue,
@@ -40,7 +42,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return DefaultTabController(
-        length: 6,
+        length: 7,
         child: Scaffold(
           backgroundColor: Colors.grey[100],
           appBar: AppBar(
@@ -70,6 +72,7 @@ class Home extends StatelessWidget {
                   Tab(icon: Icon(Icons.view_quilt)),
                   Tab(icon: Icon(Icons.g_translate)),
                   Tab(icon: Icon(Icons.ac_unit)),
+                  Tab(icon: Icon(Icons.access_alarms)),
                 ]),
           ),
           body: TabBarView(children: <Widget>[
@@ -79,6 +82,7 @@ class Home extends StatelessWidget {
             ViewDemo(),
             SliverDemo(),
             NavigatorDemo(),
+            MaterialComponents(),
           ]),
           drawer: DrawerDemo(),
           bottomNavigationBar: BottomNavigationBarDemo(),
