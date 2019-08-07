@@ -32,6 +32,7 @@ class App extends StatelessWidget {
       theme: ThemeData(
           primarySwatch: Colors.blue,
           highlightColor: Colors.blue,
+          accentColor: Colors.blue,
           splashColor: Colors.blue),
     );
   }

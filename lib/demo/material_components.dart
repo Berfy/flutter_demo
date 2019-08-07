@@ -5,6 +5,12 @@ import './popup_menu_button_demo.dart';
 import './form_demo.dart';
 import './checkbox_demo.dart';
 import './radio_demo.dart';
+import './switch_demo.dart';
+import './slider_demo.dart';
+import './datetime_demo.dart';
+import 'package:myapp/demo/dialog/simple_dialog_demo.dart';
+import 'package:myapp/demo/dialog/alert_dialog_demo.dart';
+import 'package:myapp/demo/dialog/bottom_sheet_demo.dart';
 
 class MaterialComponents extends StatelessWidget {
   @override
@@ -17,6 +23,30 @@ class MaterialComponents extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
+          ListItem(
+            title: 'BottomSheetDemo',
+            page: BottomSheetDemo(),
+          ),
+          ListItem(
+            title: 'AlertDialogDemo',
+            page: AlertDialogDemo(),
+          ),
+          ListItem(
+            title: 'SimpleDialogDemo',
+            page: SimpleDialogDemo(),
+          ),
+          ListItem(
+            title: 'DateTimeDemo',
+            page: DateTimeDemo(),
+          ),
+          ListItem(
+            title: 'SliderDemo',
+            page: SliderDemo(),
+          ),
+          ListItem(
+            title: 'SwitchDemo',
+            page: SwitchDemo(),
+          ),
           ListItem(
             title: 'RadioDemo',
             page: RadioDemo(),
